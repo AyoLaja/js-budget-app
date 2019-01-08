@@ -1,5 +1,5 @@
 :root {
-  --mainBlack: #1a1a1a;
+  --mainBlack: #002042;
   --mainLight: #fff;
   --mainGreen: #317b22;
   --mainRed: #b80c09;
@@ -8,26 +8,39 @@
 
 body {
   background: var(--mainBlack);
+  /* background: #0f0c29;  
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29);  */
   color: var(--mainLight);
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .navBar {
-  border-bottom: 1px solid #eee709
+  border-bottom: 1px solid #eee709;
 }
 
 .logo {
   color: #eee709;
-    font-size: 50px;
-    letter-spacing: 1px;
-    width: fit-content;
-    padding: 1px 7px;
-    padding-left: 9px;
-    border-radius: 15px;
-    margin: 0;
-    text-align: center;
-    border: 4px solid #eee709;
-    font-family: 'Monoton', cursive;
+  font-size: 50px;
+  letter-spacing: 1px;
+  width: fit-content;
+  padding: 1px 7px;
+  padding-left: 9px;
+  border-radius: 15px;
+  margin: 0;
+  text-align: center;
+  border: 4px solid #eee709;
+  font-family: 'Monoton', cursive;
+}
+
+h4, h6 {
+  font-family: 'Staatliches', sans-serif;
+  color: #eee709;
+  letter-spacing: 1px;
+}
+
+h5 {
+  font-size: 13px;
 }
 
 .budget-feedback,
@@ -35,18 +48,18 @@ body {
   display: none;
 }
 
-form {
-  background-color: #222;
+form, .overview-container {
+  background-color: #002c5d;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0px -2px 35px -8px #000;
+  box-shadow: 0px -2px 35px -8px #1a1a1a;
 }
 
 .budget-form {
-  border: 0.05rem solid var(--mainGreen);
+  /* border: 0.05rem solid var(--mainGreen); */
 }
 .expense-form {
-  border: 0.05rem solid var(--mainRed);
+  /* border: 0.05rem solid var(--mainRed); */
 }
 .budget-submit {
   background: transparent;

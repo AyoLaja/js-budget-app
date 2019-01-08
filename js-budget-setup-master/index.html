@@ -12,7 +12,7 @@
  <!-- google fonts -->
  <link href="https://fonts.googleapis.com/css?family=Nunito|Quicksand" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-
+ <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Staatliches" rel="stylesheet">
  <!-- font awesome -->
  <link rel="stylesheet" href="css/all.css">
  <title>budget app</title>
@@ -36,6 +36,7 @@
       <!-- budget feedback -->
       <div class="budget-feedback alert alert-danger text-capitalize">budget feedback</div>
       <!-- budget form -->
+      <h4>Your Budget</h4>
       <form id="budget-form" class=" budget-form">
        <h5 class="text-capitalize">please enter your budget</h5>
        <div class="form-group">
@@ -45,7 +46,10 @@
        <button type="submit" class="btn text-capitalize budget-submit" id="budget-submit">calculate</button>
       </form>
      </div>
-     <div class="col-md-7">
+     
+     <div class="col-md-7 my-3">
+        <h4>OVERVIEW</h3>
+        <div class="overview-container">
       <!-- app info -->
       <div class="row my-3">
        <div class="col-4 text-center mb-2">
@@ -64,6 +68,8 @@
         <h4 class="text-uppercase mt-2 balance" id="balance"> <span>$ </span><span id="balance-amount">0</span></h4>
        </div>
       </div>
+    </div>
+
      </div>
     </div>
 
@@ -72,6 +78,7 @@
       <!-- expense feedback -->
       <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div>
       <!-- expense form -->
+      <h4>Expenses</h4>
       <form id="expense-form" class=" expense-form">
        <h5 class="text-capitalize">please enter your expense</h5>
        <div class="form-group">
