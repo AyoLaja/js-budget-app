@@ -12,6 +12,24 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+.navBar {
+  border-bottom: 1px solid #eee709
+}
+
+.logo {
+  color: #eee709;
+    font-size: 50px;
+    letter-spacing: 1px;
+    width: fit-content;
+    padding: 1px 7px;
+    padding-left: 9px;
+    border-radius: 15px;
+    margin: 0;
+    text-align: center;
+    border: 4px solid #eee709;
+    font-family: 'Monoton', cursive;
+}
+
 .budget-feedback,
 .expense-feedback {
   display: none;
