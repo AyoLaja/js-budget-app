@@ -1,29 +1,34 @@
 :root {
-  --mainWhite: #f5f5f5f5;
-  --mainDark: #333333;
+  --mainBlack: #1a1a1a;
+  --mainLight: #fff;
   --mainGreen: #317b22;
   --mainRed: #b80c09;
   --mainBlue: #05668d;
 }
 
 body {
-  background: var(--mainWhite);
-  color: var(--mainDark);
+  background: var(--mainBlack);
+  color: var(--mainLight);
+  font-family: 'Quicksand', sans-serif;
 }
+
 .budget-feedback,
 .expense-feedback {
   display: none;
 }
 
+form {
+  background-color: #222;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px -2px 35px -8px #000;
+}
+
 .budget-form {
-  border: 0.15rem solid var(--mainGreen);
-  padding: 1rem;
-  border-radius: 0.25rem;
+  border: 0.05rem solid var(--mainGreen);
 }
 .expense-form {
-  border: 0.15rem solid var(--mainRed);
-  padding: 1rem;
-  border-radius: 0.25rem;
+  border: 0.05rem solid var(--mainRed);
 }
 .budget-submit {
   background: transparent;
