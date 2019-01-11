@@ -16,3 +16,17 @@ class UI {
     this.itemID = 0;
   }
 }
+
+var nextButton = document.querySelector('#welcome-next')
+nextButton.addEventListener('click', next)
+
+function next(event) {
+  event.preventDefault()
+
+  var welcomeMessage = document.querySelector('.welcome-message')
+  welcomeMessage.classList.add('slide-left-out')
+
+  var budgetForm = document.querySelector('.budget-form');
+  // budgetForm.style.display = 'block'
+  budgetForm.classList.add('slide-left-center')
+}
