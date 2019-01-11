@@ -59,7 +59,7 @@ body, html {
 }
 
 .welcome-message {
-  transition: 2s all ease-in-out;
+  transition: 1s all ease-in-out;
   text-align: center;
 }
 
@@ -74,7 +74,7 @@ h4 {
 }
 
 .budget-container {
-  transition: 2s all ease-in-out;
+  transition: 1s all ease-in-out;
   transform: translateX(100%);
 }
 
@@ -110,7 +110,7 @@ input {
   margin-top: 15px;
   color: #fff;
   background-color: inherit;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   padding: 15px;
   outline: none;
   font-size: 20px;
