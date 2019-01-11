@@ -26,7 +26,7 @@ function next(event) {
   var welcomeMessage = document.querySelector('.welcome-message')
   welcomeMessage.classList.add('slide-left-out')
 
-  var budgetForm = document.querySelector('.budget-form');
+  var budgetContainer = document.querySelector('.budget-container');
   // budgetForm.style.display = 'block'
-  budgetForm.classList.add('slide-left-center')
+  budgetContainer.classList.add('slide-left-center')
 }
