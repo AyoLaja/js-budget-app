@@ -58,6 +58,61 @@ class UI {
     }
   }
 
+  submitExpseneForm() {
+    const expenseValue = this.expenseInput.value
+    const amountValue = this.amountInput.value
+
+    if (expenseValue === '' || amountValue <= 0 ) {
+      this.budgetFeedback.innerHTML = `<span>Expense cannot be empty, zero or negative</span>`
+      this.budgetFeedback.classList.remove('hide-feedback')
+      this.budgetFeedback.classList.add('show-feedback', 'error-feedback')
+
+      setTimeout(() => {
+        this.budgetFeedback.classList.remove('show-feedback', 'error-feedback')
+        this.budgetFeedback.classList.add('hide-feedback')
+      }, 2000)
+    }
+    else {
+      let amount = parseInt(amountValue)
+      this.expenseInput = ''
+      this.amountInput = ''
+
+      let expense = {
+        id: this.itemID,
+        title: expenseValue,
+        amount
+      }
+      
+      this.itemID++
+      this.itemList.push(expense)
+      this.addExpense(expense)
+
+      //Show balance
+    }
+  }
+
+  addExpense(expense) {
+    const div = document.createElement('div')
+    div.classList.add('expense')
+    div.innerHTML = 
+    `<div class="expense-item">
+        <h6 class="expense-title list-item">- ${expense.title}</h6>
+        <h5 class="expense-amount list-item">${expense.amount}</h5>
+        
+        <div class="expense-icons list-item">
+            
+            <a href="#" class="edit-icon" data-id="${expense.id}">
+              <ion-icon name="create"></ion-icon>
+            </a>
+            <a href="#" class="delete-icon" data-id="${expense.id}">
+              <ion-icon name="trash"></ion-icon>
+            </a>
+        </div>
+    </div>`
+
+    this.expenseList.appendChild(div)
+  } 
+
   totalExpense() {
     let total = 500
     return total
@@ -81,6 +136,7 @@ function eventListeners() {
   //Expense form submit
   expenseForm.addEventListener('submit', function(event) {
     event.preventDefault()
+    bForBudget.submitExpseneForm()
   })
 
   //Expense list click

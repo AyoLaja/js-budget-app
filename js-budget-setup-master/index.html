@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <form id="budget-form" class="budget-form">
-                    <p>Please enter your budget</p>
+                    <label>Please enter your budget</label>
                     <div>
                         <input type="number" class="budget-input" id="budget-input">
                     </div>
@@ -64,16 +64,49 @@
                         <h2 class="budget" id="budget">
                             <span>$&nbsp;</span><span id="budget-amount"></span>
                         </h2>
+                        <span>budget</span>
                     </div>
                     <div class="expense-accrued">
                         <h2 class="expense" id="expense">
                             <span>-$&nbsp;</span><span id="expense-amount"></span>
                         </h2>
+                        <span>expenses</span>
                     </div>
                     <div class="balance-remaining">
                         <h2 class="balance" id="balance">
                             <span>$&nbsp;</span><span id="balance-amount"></span>
                         </h2>
+                        <span>balance</span>
+                    </div>
+                </div>
+                <div class="expense-overview">
+                    <div class="section-header">
+                        <div class="section-header-left">
+                            <h4>EXPENSES</h4>
+                        </div>
+                    </div>
+                </div>
+                <form id="expense-form" class=" expense-form">
+                    <div class="expense-form-content">
+                        <div>
+                            <!-- <label>Expense</label> -->
+                            <input type="text" class="expense-input" id="expense-input" placeholder="Enter expense" autocomplete="false">
+                        </div>
+                        <div>
+                            <!-- <label>Expense amount</label> -->
+                            <input type="number" class="expense-input" id="amount-input" placeholder="Enter expense amount">
+                        </div>
+                    </div>
+                    <!-- submit button -->
+                    <button type="submit" class="expense-submit" id="expense-submit">
+                        Add expense
+                    </button>
+                </form>
+                <div class="expense-list" id="expense-list">
+                    <div class="expense-list__info">
+                        <h5 class="list-item">expense title</h5>
+                        <h5 class="list-item">expense value</h5>
+                        <h5 class="list-item"></h5>
                     </div>
                 </div>
             </div>
@@ -90,23 +123,6 @@
 
 </html>
 
-<!-- <div class="expense">
-    <div class="expense-item d-flex justify-content-between align-items-baseline">
-        
-        <h6 class="expense-title mb-0 text-uppercase list-item">- title</h6>
-        <h5 class="expense-amount mb-0 list-item">amount</h5>
-        
-        <div class="expense-icons list-item">
-            
-            <a href="#" class="edit-icon mx-2" data-id="${expense.id}">
-                <i class="fas fa-edit"></i>
-            </a>
-            <a href="#" class="delete-icon" data-id="${expense.id}">
-                <i class="fas fa-trash"></i>
-            </a>
-        </div>
-    </div>
-    
-</div> -->
+<!--  -->
 
 <!-- end of single expense -->

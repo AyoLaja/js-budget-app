@@ -37,7 +37,7 @@ body, html {
 
 .container {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
@@ -113,7 +113,7 @@ body, html {
   transform: translate(-50%, -50%);
 }
 
-p {
+label, p {
   line-height: 1.4;
   margin-top: 20px;
 }
@@ -160,6 +160,7 @@ button:hover {
 }
 
 input {
+  font-family: 'Bree Serif', serif;
   border-radius: 10px;
   margin-top: 15px;
   background-color: inherit;
@@ -182,7 +183,7 @@ input {
   left: 50%;
   transform: translate(-50%, -100%);
   margin: 0;
-  width: 40%;
+  width: fit-content;
   padding: 15px;
   /* margin: auto; */
   text-align: center;
@@ -192,7 +193,7 @@ input {
   transition: 0.3s all ease-in-out;
 }
 
-.budget-form, .balance-overview {
+.budget-form, .balance-overview, .expense-overview, .expense-form {
   margin-top: 20px;
 }
 
@@ -209,6 +210,13 @@ input {
   font-size: 30px;
 }
 
+.balance-overview h2 + span {
+  font-size: 10px;
+  border: none;
+  border-radius: 20px;
+  padding: 2px 10px 4px;
+}
+
 .budget-remaining, .expense-accrued, .balance-remaining {
   text-align: center;
 }
@@ -222,10 +230,55 @@ input {
     justify-content: center;
     border-radius: 50%;
     align-items: center;
+    margin-bottom: 5px;
+}
+
+.budget + span {
+  background-color: green;
+}
+
+.expense + span {
+  background-color: #b00931;
+}
+
+.balance + span {
+  background-color: #003f64;
 }
 
 .balance-negative {
-  color: red;
+  color: #b00931;
+}
+
+.expense-form-content {
+  display: flex;
+  width: 100%
+}
+
+.expense-form-content div {
+  width: 50%;
+  text-align: center;
+}
+
+.expense-form-content label {
+  font-size: 13px;
+}
+
+.expense-form-content input {
+  padding: 8px;
+  font-size: 13px;
+  margin-top: 0px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  text-align: left;
+  border-radius: 0px;
+  /* color: #b00931; */
+  caret-color: #b00931;
+  transition: 0.3s all ease-in-out;
+}
+
+.expense-form-content input:focus {
+  border-color: #b00931;
 }
 
 .show-feedback {
