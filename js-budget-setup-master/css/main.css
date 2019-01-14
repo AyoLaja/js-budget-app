@@ -58,15 +58,12 @@ body, html {
   position: inherit;
   padding: 30px;
   width: 100%;
+  height: 100%;
 }
 
 .section-header {
-  position: inherit;
-    top: -60px;
     display: flex;
     width: 100%;
-    /* padding: 30px; */
-    padding-right: 60px;
 }
 
 .section-header-left {
@@ -105,6 +102,14 @@ body, html {
 .welcome-message {
   transition: 1s all ease-in-out;
   text-align: center;
+}
+
+.welcome-message-text {
+  position: absolute;
+  top: 50%;
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 p {
@@ -182,6 +187,38 @@ input {
   border-radius: 15px;
   /* transform: translateX(-15px); */
   transition: 0.3s all ease-in-out;
+}
+
+.budget-form, .balance-overview {
+  margin-top: 20px;
+}
+
+.balance-overview {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.balance-overview h2 span:first-of-type {
+  font-size: 15px;
+}
+
+.balance-overview h2 span:not(:first-of-type) {
+  font-size: 30px;
+}
+
+.budget-remaining, .expense-accrued, .balance-remaining {
+  text-align: center;
+}
+
+.budget, .expense, .balance {
+  border: 3px solid #fff;
+    display: inline-flex;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
 }
 
 .show-feedback {

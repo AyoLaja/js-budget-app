@@ -31,9 +31,9 @@ class UI {
       }, 2000)
     }
     else {
-      // this.budgetAmount.textContent = value
-      // this.budgetInput.value = ''
-      // this.showBalance()
+      this.budgetAmount.textContent = value
+      this.budgetInput.value = ''
+      this.showBalance()
 
       var balanceContainer = document.querySelector('.balance-container');
       balanceContainer.classList.add('slide-left-center')
@@ -45,7 +45,7 @@ class UI {
   }
 
   showBalance() {
-
+    console.log('Show balance ran')
   }
 }
 
