@@ -14,7 +14,8 @@
 }
 
 body, html {
-  font-family: 'Quicksand', sans-serif;
+  /* font-family: 'Quicksand', sans-serif; */
+  font-family: 'Bree Serif', serif;
 }
 
 .app {
@@ -121,6 +122,7 @@ h4 {
   border-bottom: 4px solid yellow;
   display: inline-block;
   padding-bottom: 3px;
+  font-weight: 100;
 }
 
 .budget-container, .balance-container {
@@ -150,6 +152,7 @@ button {
   cursor: pointer;
   display: block;
   font-size: small;
+  font-family: 'Bree Serif', serif;
 }
 
 button:hover {
@@ -213,12 +216,16 @@ input {
 .budget, .expense, .balance {
   border: 3px solid #fff;
     display: inline-flex;
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     text-align: center;
     justify-content: center;
     border-radius: 50%;
     align-items: center;
+}
+
+.balance-negative {
+  color: red;
 }
 
 .show-feedback {

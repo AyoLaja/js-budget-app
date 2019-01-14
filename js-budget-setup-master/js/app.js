@@ -45,7 +45,22 @@ class UI {
   }
 
   showBalance() {
-    console.log('Show balance ran')
+    const expense = this.totalExpense() 
+    const total = parseInt(this.budgetAmount.textContent) - expense
+
+    this.balanceAmount.textContent = total
+
+    if (total < 0) {
+        this.balance.classList.add('balance-negative')
+    }
+    else {
+        this.balance.classList.remove('balance-negative')
+    }
+  }
+
+  totalExpense() {
+    let total = 500
+    return total
   }
 }
 
