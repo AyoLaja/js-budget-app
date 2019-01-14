@@ -90,7 +90,7 @@
                     <div class="expense-form-content">
                         <div>
                             <!-- <label>Expense</label> -->
-                            <input type="text" class="expense-input" id="expense-input" placeholder="Enter expense" autocomplete="false">
+                            <input type="text" class="expense-input" id="expense-input" placeholder="Enter expense" autocomplete="off">
                         </div>
                         <div>
                             <!-- <label>Expense amount</label> -->
@@ -102,13 +102,11 @@
                         Add expense
                     </button>
                 </form>
-                <div class="expense-list" id="expense-list">
-                    <div class="expense-list__info">
-                        <h5 class="list-item">expense title</h5>
-                        <h5 class="list-item">expense value</h5>
-                        <h5 class="list-item"></h5>
+                <details class="all-expenses">
+                    <summary>All Expenses</summary>
+                    <div class="expense-list" id="expense-list">
                     </div>
-                </div>
+                </details>
             </div>
         </div>
         <div class="budget-feedback">

@@ -172,6 +172,15 @@ input {
   width: 100%;
 }
 
+::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+details {
+  margin-top: 20px;
+}
+
 .budget-input {
   color: #00c500;
   caret-color: green;
@@ -251,11 +260,12 @@ input {
 
 .expense-form-content {
   display: flex;
-  width: 100%
+  width: 100%;
+  justify-content: space-between;
 }
 
 .expense-form-content div {
-  width: 50%;
+  width: 45%;
   text-align: center;
 }
 
@@ -281,6 +291,60 @@ input {
   border-color: #b00931;
 }
 
+.all-expenses {
+  display: none;
+  font-size: 13px;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.expense-titlee, .expense-amount {
+  font-weight: 100;
+}
+
+.expense-icons a,
+.expense-icons a:hover{
+  text-decoration: none;
+  /* font-size: 20px; */
+  color: #fff;
+}
+
+/* .edit-icon {
+  color: #003f64;
+}
+
+.delete-icon {
+  color: #b00931;
+} */
+
+details {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: .5em .5em 0;
+  outline: none;
+}
+
+summary {
+  margin: -.5em -.5em 0;
+  /* padding: .5em; */
+  padding: 10px;
+  outline: none;
+}
+
+details[open] {
+  padding: .5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #fff;
+  margin-bottom: .5em;
+}
+
 .show-feedback {
   bottom: 1%;
   transform: translate(-50%, -50%)
@@ -303,5 +367,25 @@ ion-icon {
   .container {
     width: 90%;
     height: 400px;
+  }
+
+  .budget, .expense, .balance {
+    height: 50px;
+    width: 50px;
+  }
+
+  .budget {
+    border-color: green;
+    background-color: green;
+  }
+  
+  .expense {
+    border-color: #b00931;
+    background-color: #b00931;
+  }
+
+  .balance {
+    border-color: #003f64;
+    background-color: #003f64;
   }
 }

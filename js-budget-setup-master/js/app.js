@@ -74,8 +74,8 @@ class UI {
     }
     else {
       let amount = parseInt(amountValue)
-      this.expenseInput = ''
-      this.amountInput = ''
+      this.expenseInput.value = ''
+      this.amountInput.value = ''
 
       let expense = {
         id: this.itemID,
@@ -86,18 +86,17 @@ class UI {
       this.itemID++
       this.itemList.push(expense)
       this.addExpense(expense)
-
-      //Show balance
+      this.showBalance()
     }
   }
 
   addExpense(expense) {
     const div = document.createElement('div')
-    div.classList.add('expense')
+    // div.classList.add('expense')
     div.innerHTML = 
     `<div class="expense-item">
-        <h6 class="expense-title list-item">- ${expense.title}</h6>
-        <h5 class="expense-amount list-item">${expense.amount}</h5>
+        <span class="expense-title list-item">- ${expense.title}</span>
+        <span class="expense-amount list-item">${expense.amount}</span>
         
         <div class="expense-icons list-item">
             
@@ -110,11 +109,24 @@ class UI {
         </div>
     </div>`
 
+    let appContainer = document.querySelector('.container')
+    let allExpenses = document.querySelector('.all-expenses')
+    appContainer.style.height = '700px'
+    allExpenses.style.display = 'block'
+
     this.expenseList.appendChild(div)
   } 
 
   totalExpense() {
-    let total = 500
+    let total = 0
+    if (this.itemList.length > 0) {
+      total = this.itemList.reduce((accumulator, current) => {
+        accumulator += current.amount 
+        // console.log(accumulator, current)
+        return accumulator
+      }, 0)
+    }
+    this.expenseAmount.textContent = total;
     return total
   }
 }
