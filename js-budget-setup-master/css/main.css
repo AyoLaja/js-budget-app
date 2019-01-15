@@ -128,6 +128,7 @@ h4 {
 .budget-container, .balance-container {
   transition: 1s all ease-in-out;
   transform: translateX(100%);
+  /* display: none; */
 }
 
 .slide-left-out {
@@ -387,5 +388,9 @@ ion-icon {
   .balance {
     border-color: #003f64;
     background-color: #003f64;
+  }
+
+  .balance-overview h2 span:not(:first-of-type) {
+    font-size: 25px;
   }
 }
