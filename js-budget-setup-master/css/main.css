@@ -20,10 +20,10 @@ body, html {
 
 .app {
   position: relative;
-  /* background: #373B44; 
+  background: #373B44; 
   background: -webkit-linear-gradient(to top, #4286f4, #373B44); 
-  background: linear-gradient(to top, #4286f4, #373B44);  */
-  background: url(../img/footer_lodyas.png);
+  background: linear-gradient(to top, #4286f4, #373B44); 
+  /* background: url(../img/footer_lodyas.png); */
   color: var(--mainLight);
   /* background-size: cover;
   -webkit-background-size: cover;
@@ -54,9 +54,9 @@ body, html {
   align-items: center;
   overflow: hidden;
   transition: 1s all ease-in-out;
-  background: #000000;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: #000000; 
+background: -webkit-linear-gradient(to top, #434343, #000000);  
+background: linear-gradient(to top, #434343, #000000);  */
 
 }
 
